@@ -7,7 +7,7 @@ Dashboard to manage a restaurant, follow the following steps to open the project
 * **Intellij.** : IDE for developing java applications. (if you do not have intellij install please follow the following [tutorial](https://www.jetbrains.com/help/idea/installation-guide.html#standalone "tutorial"))
 
 ## Steps to setup repo
-* Download a copy of the repo to your local machine (also known as clone), using the following command `git clone https://github.com/alonz0113/BankAccount.git`
+* Download a copy of the repo to your local machine (also known as clone), using the following command `git clone https://github.com/alonz0113/familyRestaurant.git`
 * Open intellij, and open the project using the following instructions:
     1. press open button
     ![](assets/tutorial_1.JPG)
