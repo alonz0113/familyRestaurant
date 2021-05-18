@@ -14,6 +14,6 @@ public class Restaurant {
     }
 
     public void setCash(float cash) {
-        this.cash = cash;
+        this.cash += cash;
     }
 }
