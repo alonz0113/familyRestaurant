@@ -45,4 +45,14 @@ public class Ingredient {
         this.amount = amount;
     }
 
+    //Added to let view the ingredients from Resturant class
+    @Override
+    public String toString() {
+        return "Ingredient{" +
+                "name='" + name + '\'' +
+                ", calories=" + calories +
+                ", price=" + price +
+                ", amount=" + amount +
+                '}';
+    }
 }
