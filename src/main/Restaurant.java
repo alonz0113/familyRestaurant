@@ -7,6 +7,7 @@ public class Restaurant {
     private float cash;
     private List<Ingredient> ingredients;
 
+
     public Restaurant() {
         this.cash = 100000;
         this.ingredients = new ArrayList<>();
@@ -42,5 +43,21 @@ public class Restaurant {
         this.ingredients = ingredients;
     }
 
+    public static void showList(List<Ingredient> ingredients){
+
+        for (int i=0; i<ingredients.size(); i++){
+            System.out.print(i+1 +". ");
+            System.out.println(ingredients.get(i).getName() + ": $" + ingredients.get(i).getPrice());
+
+        }
+
+    }
+
+    public static void showIngredients(List<Ingredient> ingredientList){
+        for (int i=0; i<ingredientList.size(); i++){
+            System.out.print(i+1 +". ");
+            System.out.println(ingredientList.get(i));
+        }
+    }
 
 }
