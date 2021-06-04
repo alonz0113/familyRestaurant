@@ -13,6 +13,7 @@ public class Ingredient {
         this.amount = amount;
     }
 
+
     public String getName() {
         return name;
     }
@@ -48,11 +49,9 @@ public class Ingredient {
     //Added to let view the ingredients from Resturant class
     @Override
     public String toString() {
-        return "Ingredient{" +
-                "name='" + name + '\'' +
+        return "name=" + name +
                 ", calories=" + calories +
                 ", price=" + price +
-                ", amount=" + amount +
-                '}';
+                ", amount=" + amount;
     }
 }
