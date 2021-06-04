@@ -5,7 +5,7 @@ import java.util.*;
 public class ManageRestaurant {
 
 public static  void showMenu(){
-    System.out.print("\nescoja una opcion del menu:" +
+    System.out.print("\n choose an option from the menu:" +
             "\n a. Print my current money amount" +
             "\n b. Print my current ingredient inventory" +
             "\n c. Buy some amount of any ingredient" +
@@ -63,42 +63,43 @@ public static  void showMenu(){
                     break;
 
                 case "b":
-                    System.out.print("list de ingredients: " + "\n");
+                    System.out.print("list of ingredients : " + "\n");
                     lasTresEsquinas.showIngredients(ingredients);
                     showMenu();
                     break;
 
                 case "c":
                     lasTresEsquinas.showList(ingredients1);
-                    System.out.print("si el producto esta en la lista digite 1 sino digite 2 " + "\n");
+                    System.out.print("\n"+"If the product is on the list, enter option 1, otherwise, enter option 2 to add a new product:" + "\n");
                     int options = Integer.parseInt(input.nextLine());
                     if(options == 1){
                         int optionList;
-                        System.out.print("digite el nro del producto que desea comprar: " + "\n");
+                        System.out.print("enter the product number you want to buy: " + "\n");
                         optionList = Integer.parseInt(input.nextLine());
                         System.out.println(ingredients1.get(optionList - 1).getName() + " $" + ingredients1.get(optionList - 1).getPrice());
-                        System.out.print("cantidad de items: ");
+                        System.out.print("\n"+"quantity of items: ");
                         float items = Float.parseFloat(input.nextLine());
                         lasTresEsquinas.setCash(lasTresEsquinas.getCash() - items * ingredients.get(optionList-1).getPrice());
                         float cantidadItems = lasTresEsquinas.getIngredients().get(optionList-1).getAmount();
                         lasTresEsquinas.getIngredients().get(optionList-1).setAmount(cantidadItems + items);
                     } else if(options == 2){
-                        System.out.println("\n" + "nombre del ingrediente: ");
+                        System.out.println("\n" + "ingredient name: ");
                         String name = input.nextLine();
-                        System.out.println("calorias del producto: ");
+                        System.out.println("\n"+"ingredient calories: ");
                         float calories = Float.parseFloat(input.nextLine());
-                        System.out.print("precio del producto: ");
+                        System.out.print("\n"+"ingredient price: ");
                         float price = Float.parseFloat(input.nextLine());
-                        System.out.print("cantidad de items: ");
+                        System.out.print("\n"+"quantity of items: ");
                         float amount = Float.parseFloat(input.nextLine());
                         lasTresEsquinas.addIngredient(new Ingredient(name, calories, price, amount));
                         lasTresEsquinas.setCash(lasTresEsquinas.getCash() - amount * price);
-                    }else{System.out.print("no es una option valida");}
+                    }else{System.out.print("\n"+"the option is not valid");}
                     showMenu();
                     break;
 
                 case "d":
                     System.out.print("see you soon" + "\n");
+                    option ="d";
                     break;
 
                     default: showMenu();
